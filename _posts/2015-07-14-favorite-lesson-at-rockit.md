@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Favorite Lesson at Rockit"
-date:   2015-06-30 09:56:45
+date:   2015-07-14 03:45:00
 categories: jekyll update
 ---
 
