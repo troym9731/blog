@@ -1,52 +1,183 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@charset "utf-8";
+/****************************************
+  Import
+*****************************************/
 
+@import url(http://fonts.googleapis.com/css?family=Lobster|Montserrat:400,700);
 
+/****************************************
+  Inherited Syles
+*****************************************/
 
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+html {
+  box-sizing: border-box;
+  font: 11pt 'Open Sans', Arial;
+  color: #616165;
+}
 
-$spacing-unit:     30px;
+*, *::before, *::after {
+  box-sizing: inherit;
+  color: inherit;
+  font: inherit;
+}
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+/****************************************
+  Variables
+*****************************************/
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$basic-color: #3E8D73;
+$header-font: Montserrat;
+$h3-color: #318165;
 
-// Width of the content area
-$content-width:    800px;
+/****************************************
+  Defaults
+*****************************************/
 
-$on-palm:          600px;
-$on-laptop:        800px;
+body {
+  background-color: #F6F6F6;
+}
 
+h3 {
+  margin: 0;
+}
 
+/****************************************
+  Helpers
+*****************************************/
 
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
+%content-box {
+    background-color: #fff;
+    box-shadow: 0 0 10px -4px #000; 
+    margin-bottom: 35px;
+}
+
+/****************************************
+  Layout
+*****************************************/
+
+.panel > div {
+  width: 750px;
+  margin: 0 auto;
+}
+
+/** Header **/
+
+.primary-header {
+  background-color: $basic-color;
+}
+
+.primary-nav a {
+  color: #fff;
+  display: inline-block;
+  font-family: $header-font;
+  padding: 1em;
+  text-decoration: none;
+
+  &.highlight {
+    background-color: #99BDAD;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.tile-wrapper {
+  text-align: center;
+}
+
+/** Footer **/
+
+.primary-footer {
+  background-color: $basic-color;
+
+  > div {
+    overflow: hidden;
+  }
+
+  > div > div {
+    width: 50%;
+  }
+
+  h6 {
+    color: #F6F6F6;
+    font: 1.3em $header-font;
+    margin: 8px 0;
+  }
+
+  .social-media {
+    float: left;
+    margin: 9px 0;
+    min-height: 100px;
+
+    .fa {
+      color: #F6F6F6;
+      font-size: 1.7em;
+      margin-right: 0.4em;
     }
+  }
+
+  .footer-links {
+    margin-left: 50%;
+  }
 }
 
 
+/****************************************
+  Components
+*****************************************/
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+.logo {
+  color: $basic-color;
+  font: 4em Lobster;
+  margin: 0.5em auto;
+  width: 4em;
+}
+
+/** Tiles **/
+
+.blog-tile {
+  @extend %content-box;
+  display: inline-block;
+  width: 48%;
+  height: 450px;
+  margin-right: 6px;
+  margin-left: 6px;
+  vertical-align: top;
+  line-height: 150%;
+
+  > img {
+    display: block;
+    height: 50%;
+    width: 100%;
+  }
+
+  > div {
+    min-height: 50%;
+    padding: 25px;
+    text-align: left;
+  }
+
+  h3 {
+    color: $h3-color;
+    font: 1.3em $header-font;
+    border-bottom: 2px solid #EBEBEB;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+.feature {
+  display: block;
+  width: 100%;
+  height: 600px;
+  margin-right: 0;
+  margin-left: 0;
+
+  > img {
+    height: 62%;
+  }
+
+  > div {
+    min-height: 38%;
+  }
+}
