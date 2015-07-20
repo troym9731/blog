@@ -1,3 +1,6 @@
+---
+
+---
 /****************************************
   Import
 *****************************************/
@@ -179,5 +182,16 @@ h3 {
 
   > div {
     min-height: 38%;
+  }
+}
+
+.footer-nav a {
+  display: block;
+  color: #F6F6F6;
+  text-decoration: none;
+  line-height: 140%;
+
+  &:hover {
+    text-decoration: underline;
   }
 }

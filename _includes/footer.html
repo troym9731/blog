@@ -11,10 +11,11 @@
 
       <div class="footer-links">
         <h6>RECENT POSTS</h6>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
+        <nav class="footer-nav">
+          {% for post in site.posts %}
+          <a href="{{ page.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          {% endfor %}
+        </nav>
       </div>
       
     </div>

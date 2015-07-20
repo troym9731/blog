@@ -2,22 +2,31 @@
 layout: default
 ---
 
-<div class="home">
+<div class="panel">
+    <div>
+      
+      <h1 class="logo">{{ site.title }}</h1>
 
-  <h1 class="page-heading">Posts</h1>
+      <div class="feature blog-tile">
+        <img src="http://img06.deviantart.net/25de/i/2012/134/3/1/037_by_koko_stock-d4zq28i.jpg" alt="">
+        <div>
+          <h3>FEATURE TITLE</h3>
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, soluta. Quia officia laboriosam, sed aspernatur maxime reprehenderit quis eligendi eum, ipsum quo officiis alias, recusandae impedit similique est, repellendus a.</div>
+        </div>
+      </div>
+      
+      <div class="tile-wrapper">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <div class="blog-tile">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvIJ9XweRdl2BMF1VzrLB9Wsp3XfUMQk1GDqWfyrQtopuwFMq9" alt="">
+          <div>
+            <h3>TITLE 2</h3>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam mollitia repellat molestiae quasi voluptates assumenda quisquam dicta voluptatem ab repudiandae sequi, fugit quaerat dolorem optio laborum, nihil nemo nisi cupiditate!</div>
+          </div>
+        </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+      </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
+  </div>
 
-</div>
