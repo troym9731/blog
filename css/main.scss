@@ -41,6 +41,7 @@ body {
 
 h3 {
   margin: 0;
+  text-transform: uppercase;
 }
 
 /****************************************
@@ -74,6 +75,7 @@ h3 {
   font-family: $header-font;
   padding: 1em;
   text-decoration: none;
+  text-transform: uppercase;
 
   &.highlight {
     background-color: #99BDAD;
@@ -136,6 +138,11 @@ h3 {
   width: 4em;
 }
 
+.secondary-logo {
+  @extend .logo;
+  width: 6em;
+}
+
 /** Tiles **/
 
 .blog-tile {
@@ -194,4 +201,10 @@ h3 {
   &:hover {
     text-decoration: underline;
   }
+}
+
+.blog-list a {
+  text-decoration: none;
+  color: $basic-color;
+  font: 1.3em $header-font;
 }
