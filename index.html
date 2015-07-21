@@ -2,31 +2,37 @@
 layout: default
 ---
 
-<div class="panel">
+<h1 class="logo">{{ site.title }}</h1>
+
+<div class="feature blog-tile">
+  <img src="http://img06.deviantart.net/25de/i/2012/134/3/1/037_by_koko_stock-d4zq28i.jpg" alt="">
+  <div>
+    <h3><a href="">Feature Title</a></h3>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, soluta. Quia officia laboriosam, sed aspernatur maxime reprehenderit quis eligendi eum, ipsum quo officiis alias, recusandae impedit similique est, repellendus a.</div>
+  </div>
+</div>
+
+<div class="tile-wrapper">
+
+  <div class="blog-tile">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvIJ9XweRdl2BMF1VzrLB9Wsp3XfUMQk1GDqWfyrQtopuwFMq9" alt="">
     <div>
-      
-      <h1 class="logo">{{ site.title }}</h1>
-
-      <div class="feature blog-tile">
-        <img src="http://img06.deviantart.net/25de/i/2012/134/3/1/037_by_koko_stock-d4zq28i.jpg" alt="">
-        <div>
-          <h3><a href="">Feature Title</a></h3>
-          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, soluta. Quia officia laboriosam, sed aspernatur maxime reprehenderit quis eligendi eum, ipsum quo officiis alias, recusandae impedit similique est, repellendus a.</div>
-        </div>
-      </div>
-      
-      <div class="tile-wrapper">
-
-        <div class="blog-tile">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvIJ9XweRdl2BMF1VzrLB9Wsp3XfUMQk1GDqWfyrQtopuwFMq9" alt="">
-          <div>
-            <h3><a href="">Title 2</a></h3>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam mollitia repellat molestiae quasi voluptates assumenda quisquam dicta voluptatem ab repudiandae sequi, fugit quaerat dolorem optio laborum, nihil nemo nisi cupiditate!</div>
-          </div>
-        </div>
-
-      </div>
-
+      <h3><a href="">Title 2</a></h3>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam mollitia repellat molestiae quasi voluptates assumenda quisquam dicta voluptatem ab repudiandae sequi, fugit quaerat dolorem optio laborum, nihil nemo nisi cupiditate!</div>
     </div>
   </div>
+
+</div>
+
+ <!--  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul> -->
 
