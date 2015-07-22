@@ -2,6 +2,7 @@
 layout: post
 title:  "Favorite Lesson at Rockit"
 date:   2015-07-14 03:45:00
+image: http://img06.deviantart.net/25de/i/2012/134/3/1/037_by_koko_stock-d4zq28i.jpg
 categories: jekyll update
 ---
 
