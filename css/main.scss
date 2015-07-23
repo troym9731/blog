@@ -149,6 +149,7 @@ img {
 
 .secondary-logo {
   @extend .logo;
+  font: 4em $header-font;
   width: 6em;
 }
 
